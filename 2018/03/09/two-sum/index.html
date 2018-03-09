@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="LZ的小屋">
 <meta property="og:description" content="最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-09T11:40:54.092Z">
+<meta property="og:updated_time" content="2018-03-09T11:50:03.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="two sum">
 <meta name="twitter:description" content="最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。">
@@ -395,21 +395,8 @@
       
 
       
-        <p>最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。<br><a id="more"></a><br>C语言代码如下：<br><code>int* twoSum(int* nums, int numsSize, int target) {
-    int *a = (int*)malloc(2*sizeof(int));
-    for(int i = 0;i&lt;numsSize;i++)
-    {
-        for(int j = i+1;(j&lt;numsSize &amp;&amp; j != i);j++)
-        {
-            if(nums[i] + nums[j] == target)
-            {
-                a[0] = i;
-                a[1] = j;
-            }
-        }
-    }
-    return a;
-}</code><br>总体来说这道题还是比较简单的</p>
+        <p>最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。<br><a id="more"></a><br>C语言代码如下：</p>
+<p><pre><br>int<em> twoSum(int</em> nums, int numsSize, int target) {<br>    int <em>a = (int</em>)malloc(2*sizeof(int));<br>    for(int i = 0;i&lt;numsSize;i++)<br>    {<br>        for(int j = i+1;(j&lt;numsSize &amp;&amp; j != i);j++)<br>        {<br>            if(nums[i] + nums[j] == target)<br>            {<br>                a[0] = i;<br>                a[1] = j;<br>            }<br>        }<br>    }<br>    return a;<br>}<br></pre><br>总体来说这道题还是比较简单的</p>
 
       
     </div>
