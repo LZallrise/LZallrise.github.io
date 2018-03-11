@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="LZ的小屋">
 <meta property="og:description" content="这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-11T09:51:17.503Z">
+<meta property="og:updated_time" content="2018-03-11T10:05:49.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reverse Integer">
 <meta name="twitter:description" content="这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下">
@@ -351,7 +351,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-11T17:51:17+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-11T18:05:49+08:00">
                 2018-03-11
               </time>
             
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  158
+                  184
                 </span>
               
 
@@ -455,29 +455,8 @@
 
       
         <p>这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下<br><a id="more"></a></p>
-<p><pre></pre></p>
-<p>#include&lt;stdio.h&gt;</p>
-<p>#include&lt;math.h&gt;<br>int main()<br>{   //int min_value =0x80000000,max_value=0x7fffffff;</p>
-<pre><code>int a,b,c,d=0,f;
-printf(&quot;请输入：&quot;);
-scanf(&quot;%d&quot;,&amp;a);
-//if(a&lt;=min_value||a&gt;=max_value)
-        //return -1;
-int flag=a&lt;0?-1:1;
-if(a&lt;0)
- a=abs(a);
-   while(a&gt;0)
-   {   int temp=d;
-        d=d*10;
-        if(temp!=d)
-            return -1;//注意溢出的处理
-       d=d*10+a%10;//精髓所在
-       a=a/10;
-   }
-d=d*flag;
-printf(&quot;%d&quot;,d);
-return 0;
-</code></pre><p>}<br><br>上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;math.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;   //int min_value =0x80000000,max_value=0x7fffffff;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    int a,b,c,d=0,f;</span><br><span class="line">    printf(&quot;请输入：&quot;);</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;a);</span><br><span class="line">    //if(a&lt;=min_value||a&gt;=max_value)</span><br><span class="line">            //return -1;</span><br><span class="line">    int flag=a&lt;0?-1:1;</span><br><span class="line">    if(a&lt;0)</span><br><span class="line">     a=abs(a);</span><br><span class="line">       while(a&gt;0)</span><br><span class="line">       &#123;   int temp=d;</span><br><span class="line">            d=d*10;</span><br><span class="line">            if(temp!=d)</span><br><span class="line">                return -1;//注意溢出的处理</span><br><span class="line">           d=d*10+a%10;//精髓所在</span><br><span class="line">           a=a/10;</span><br><span class="line">       &#125;</span><br><span class="line">    d=d*flag;</span><br><span class="line">    printf(&quot;%d&quot;,d);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。</p>
 
       
     </div>
