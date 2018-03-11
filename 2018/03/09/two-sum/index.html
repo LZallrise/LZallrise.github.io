@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="LZ的小屋">
 <meta property="og:description" content="最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-09T11:50:03.215Z">
+<meta property="og:updated_time" content="2018-03-11T10:25:18.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="two sum">
 <meta name="twitter:description" content="最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-09T19:50:03+08:00">
-                2018-03-09
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-11T18:25:18+08:00">
+                2018-03-11
               </time>
             
           </span>
@@ -417,7 +417,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  115
+                  130
                 </span>
               
 
@@ -454,8 +454,8 @@
       
 
       
-        <p>最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。<br><a id="more"></a><br>C语言代码如下：</p>
-<p><pre><br>int<em> twoSum(int</em> nums, int numsSize, int target) {<br>    int <em>a = (int</em>)malloc(2*sizeof(int));<br>    for(int i = 0;i&lt;numsSize;i++)<br>    {<br>        for(int j = i+1;(j&lt;numsSize &amp;&amp; j != i);j++)<br>        {<br>            if(nums[i] + nums[j] == target)<br>            {<br>                a[0] = i;<br>                a[1] = j;<br>            }<br>        }<br>    }<br>    return a;<br>}<br></pre><br>总体来说这道题还是比较简单的</p>
+        <p>最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。<br><a id="more"></a><br>C语言代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int* twoSum(int* nums, int numsSize, int target) &#123;</span><br><span class="line">    int *a = (int*)malloc(2*sizeof(int));</span><br><span class="line">    for(int i = 0;i&lt;numsSize;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j = i+1;(j&lt;numsSize &amp;&amp; j != i);j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(nums[i] + nums[j] == target)</span><br><span class="line">            &#123;</span><br><span class="line">                a[0] = i;</span><br><span class="line">                a[1] = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>总体来说这道题还是比较简单的</p>
 
       
     </div>

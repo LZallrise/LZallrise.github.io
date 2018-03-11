@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[two sum]]></title>
     <url>%2F2018%2F03%2F09%2Ftwo-sum%2F</url>
-    <content type="text"><![CDATA[最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。C语言代码如下： int twoSum(int nums, int numsSize, int target) { int a = (int)malloc(2*sizeof(int)); for(int i = 0;i&lt;numsSize;i++) { for(int j = i+1;(j&lt;numsSize &amp;&amp; j != i);j++) { if(nums[i] + nums[j] == target) { a[0] = i; a[1] = j; } } } return a;}总体来说这道题还是比较简单的]]></content>
+    <content type="text"><![CDATA[最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。C语言代码如下：123456789101112131415int* twoSum(int* nums, int numsSize, int target) &#123; int *a = (int*)malloc(2*sizeof(int)); for(int i = 0;i&lt;numsSize;i++) &#123; for(int j = i+1;(j&lt;numsSize &amp;&amp; j != i);j++) &#123; if(nums[i] + nums[j] == target) &#123; a[0] = i; a[1] = j; &#125; &#125; &#125; return a;&#125; 总体来说这道题还是比较简单的]]></content>
       <categories>
         <category>C语言</category>
       </categories>
