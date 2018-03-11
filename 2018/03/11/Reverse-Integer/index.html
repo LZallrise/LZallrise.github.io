@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="LZ的小屋">
 <meta property="og:description" content="这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-11T09:47:28.948Z">
+<meta property="og:updated_time" content="2018-03-11T09:51:17.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reverse Integer">
 <meta name="twitter:description" content="这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下">
@@ -351,7 +351,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-11T17:47:28+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-11T17:51:17+08:00">
                 2018-03-11
               </time>
             
@@ -455,13 +455,14 @@
 
       
         <p>这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下<br><a id="more"></a></p>
-<p><pre>#include&lt;stdio.h&gt;</pre></p>
-<p>#include&lt;math.h&gt;<br>int main()<br>{   int min_value =0x80000000,max_value=0x7fffffff;</p>
+<p><pre></pre></p>
+<p>#include&lt;stdio.h&gt;</p>
+<p>#include&lt;math.h&gt;<br>int main()<br>{   //int min_value =0x80000000,max_value=0x7fffffff;</p>
 <pre><code>int a,b,c,d=0,f;
 printf(&quot;请输入：&quot;);
 scanf(&quot;%d&quot;,&amp;a);
-if(a&lt;=min_value||a&gt;=max_value)
-        return -1;
+//if(a&lt;=min_value||a&gt;=max_value)
+        //return -1;
 int flag=a&lt;0?-1:1;
 if(a&lt;0)
  a=abs(a);
@@ -476,7 +477,7 @@ if(a&lt;0)
 d=d*flag;
 printf(&quot;%d&quot;,d);
 return 0;
-</code></pre><p>}<br>上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。</p>
+</code></pre><p>}<br><br>上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。</p>
 
       
     </div>
