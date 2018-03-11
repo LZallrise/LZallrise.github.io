@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Reverse Integer]]></title>
+    <url>%2F2018%2F03%2F11%2FReverse-Integer%2F</url>
+    <content type="text"><![CDATA[这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下 #include&lt;stdio.h&gt; #include&lt;math.h&gt;int main(){ int min_value =0x80000000,max_value=0x7fffffff; int a,b,c,d=0,f; printf(&quot;请输入：&quot;); scanf(&quot;%d&quot;,&amp;a); if(a&lt;=min_value||a&gt;=max_value) return -1; int flag=a&lt;0?-1:1; if(a&lt;0) a=abs(a); while(a&gt;0) { int temp=d; d=d*10; if(temp!=d) return -1;//注意溢出的处理 d=d*10+a%10;//精髓所在 a=a/10; } d=d*flag; printf(&quot;%d&quot;,d); return 0; }上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>LeetCode日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[two sum]]></title>
     <url>%2F2018%2F03%2F09%2Ftwo-sum%2F</url>
     <content type="text"><![CDATA[最近开始刷leetcode上的题，这个题还是比较简单的，意思就是说从一堆数选择第一个满足相加等于你输入数字的两个数。C语言代码如下： int twoSum(int nums, int numsSize, int target) { int a = (int)malloc(2*sizeof(int)); for(int i = 0;i&lt;numsSize;i++) { for(int j = i+1;(j&lt;numsSize &amp;&amp; j != i);j++) { if(nums[i] + nums[j] == target) { a[0] = i; a[1] = j; } } } return a;}总体来说这道题还是比较简单的]]></content>
