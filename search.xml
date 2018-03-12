@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Palindrome Number]]></title>
+    <url>%2F2018%2F03%2F12%2FPalindrome-Number%2F</url>
+    <content type="text"><![CDATA[这道题也是比较简单的，我是在上题“Reverse Integer”的基础上直接做的。这样一来就非常简单了。 代码如下：1234567891011121314151617181920212223242526#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main()&#123; int a,b,c,i,d=0; scanf("%d",&amp;a); int flag=a&lt;0?-1:1; if(a&lt;0) a=abs(a); int tag1=a; while(a&gt;0) &#123; int temp=d; d=d*10; if(temp!=d/10) printf("不是回数")； d=d+a%10; a=a/10; &#125; if(d==tag1*flag) printf("是回数"); else printf("不是回数"); return 0;&#125; 这里要注意一下，负数都不是回数！]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>LeetCode日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Reverse Integer]]></title>
     <url>%2F2018%2F03%2F11%2FReverse-Integer%2F</url>
-    <content type="text"><![CDATA[这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下 1234567891011121314151617181920212223242526#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main()&#123; //int min_value =0x80000000,max_value=0x7fffffff; int a,b,c,d=0,f; printf("请输入："); scanf("%d",&amp;a); //if(a&lt;=min_value||a&gt;=max_value) //return -1; int flag=a&lt;0?-1:1; if(a&lt;0) a=abs(a); while(a&gt;0) &#123; int temp=d; d=d*10; if(temp!=d) return -1;//注意溢出的处理 d=d*10+a%10;//精髓所在 a=a/10; &#125; d=d*flag; printf("%d",d); return 0;&#125; 上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。]]></content>
+    <content type="text"><![CDATA[这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下 1234567891011121314151617181920212223242526#include&lt;stdio.h&gt;#include&lt;math.h&gt;int main()&#123; //int min_value =0x80000000,max_value=0x7fffffff; int a,b,c,d=0,f; printf("请输入："); scanf("%d",&amp;a); //if(a&lt;=min_value||a&gt;=max_value) //return -1; int flag=a&lt;0?-1:1; if(a&lt;0) a=abs(a); while(a&gt;0) &#123; int temp=d; d=d*10; if(temp!=d/10) return -1;//注意溢出的处理 d=d+a%10;//精髓所在 a=a/10; &#125; d=d*flag; printf("%d",d); return 0;&#125; 上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。]]></content>
       <categories>
         <category>C语言</category>
       </categories>

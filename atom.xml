@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-11T10:30:43.742Z</updated>
+  <updated>2018-03-12T13:40:40.388Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Palindrome Number</title>
+    <link href="http://yoursite.com/2018/03/12/Palindrome-Number/"/>
+    <id>http://yoursite.com/2018/03/12/Palindrome-Number/</id>
+    <published>2018-03-12T13:34:46.000Z</published>
+    <updated>2018-03-12T13:40:40.388Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这道题也是比较简单的，我是在上题“Reverse Integer”的基础上直接做的。这样一来就非常简单了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="C语言" scheme="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+      <category term="LeetCode日常" scheme="http://yoursite.com/tags/LeetCode%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Reverse Integer</title>
     <link href="http://yoursite.com/2018/03/11/Reverse-Integer/"/>
     <id>http://yoursite.com/2018/03/11/Reverse-Integer/</id>
     <published>2018-03-11T09:16:58.000Z</published>
-    <updated>2018-03-11T10:30:43.742Z</updated>
+    <updated>2018-03-12T13:33:48.156Z</updated>
     
     <summary type="html">
     
