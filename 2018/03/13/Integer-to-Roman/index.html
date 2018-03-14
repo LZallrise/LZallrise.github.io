@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="LZ的小屋">
 <meta property="og:description" content="这道题主要看的是对罗马数字与阿拉伯数字的转换规则是否清楚，若是不清楚会很难做，了解后则会很简单；">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-13T14:58:01.224Z">
+<meta property="og:updated_time" content="2018-03-14T11:42:47.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Integer to Roman">
 <meta name="twitter:description" content="这道题主要看的是对罗马数字与阿拉伯数字的转换规则是否清楚，若是不清楚会很难做，了解后则会很简单；">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-13T22:58:01+08:00">
-                2018-03-13
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T19:42:47+08:00">
+                2018-03-14
               </time>
             
           </span>
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  347
+                  526
                 </span>
               
 
@@ -454,7 +454,9 @@
 
       
         <p>这道题主要看的是对罗马数字与阿拉伯数字的转换规则是否清楚，若是不清楚会很难做，了解后则会很简单；<br><a id="more"></a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入要转换的数字:"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num);</span><br><span class="line">    <span class="keyword">char</span> *thousands[<span class="number">4</span>]=&#123;<span class="string">""</span>,<span class="string">"M"</span>,<span class="string">"MM"</span>,<span class="string">"MMM"</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> *hundreds[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"C"</span>, <span class="string">"CC"</span>, <span class="string">"CCC"</span>, <span class="string">"CD"</span>, <span class="string">"D"</span>, <span class="string">"DC"</span>, <span class="string">"DCC"</span>, <span class="string">"DCCC"</span>, <span class="string">"CM"</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> *tens[<span class="number">10</span>] = &#123;<span class="string">""</span>,<span class="string">"X"</span>,<span class="string">"XX"</span>,<span class="string">"XXX"</span>,<span class="string">"XL"</span>,<span class="string">"L"</span>,<span class="string">"LX"</span>,<span class="string">"LXX"</span>,<span class="string">"LXXX"</span>,<span class="string">"XC"</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> *digits[<span class="number">10</span>] = &#123;<span class="string">""</span>,<span class="string">"I"</span>,<span class="string">"II"</span>,<span class="string">"III"</span>,<span class="string">"IV"</span>,<span class="string">"V"</span>,<span class="string">"VI"</span>,<span class="string">"VII"</span>,<span class="string">"VIII"</span>,<span class="string">"IX"</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>,thousands[num/<span class="number">1000</span>]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>,hundreds[num%<span class="number">1000</span>/<span class="number">100</span>]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>,tens[num%<span class="number">100</span>/<span class="number">10</span>]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>,digits[num%<span class="number">10</span>]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>不了解罗马数字规则的同学可以参考<a href="http://baike.baidu.com/link?url=injU8M4bAoc2zRZQ1GtgrfvuzCJO9PLnq6fpQGJLenakbzo-rS8p-qsYHR_81-aN" target="_blank" rel="noopener">http://baike.baidu.com/link?url=injU8M4bAoc2zRZQ1GtgrfvuzCJO9PLnq6fpQGJLenakbzo-rS8p-qsYHR_81-aN</a><br>另外，这里需要注意char<em>与char[]的区别，这里定义的是一个一维字符数组，并进行初始化，一维数组的元素只能是单个的字符，而上面的数据却是字符串，所以，在编译时会报错误。所以不能使用char[],可以使用二维数组char[][],或者直接使用char</em>；<br>tip：这里直接用的四个输出语句，但是leetcode上要求用函数，所以要用return返回整个字符串，但是C语言有涉及到char*类型数组的拼接，暂时没搞出来，而java直接用的String类型的，所以直接用java代码提交的；</p>
+<p>不了解罗马数字规则的同学可以参考<a href="http://baike.baidu.com/link?url=injU8M4bAoc2zRZQ1GtgrfvuzCJO9PLnq6fpQGJLenakbzo-rS8p-qsYHR_81-aN" target="_blank" rel="noopener">http://baike.baidu.com/link?url=injU8M4bAoc2zRZQ1GtgrfvuzCJO9PLnq6fpQGJLenakbzo-rS8p-qsYHR_81-aN</a><br>另外，这里需要注意char<em>与char[]的区别，这里定义的是一个一维字符数组，并进行初始化，一维数组的元素只能是单个的字符，而上面的数据却是字符串，所以，在编译时会报错误。所以不能使用char[],可以使用二维数组char[][],或者直接使用char</em>；</p>
+<h2 id="tip：这里直接用的四个输出语句，但是leetcode上要求用函数，所以要用return返回整个字符串，但是C语言有涉及到char-类型数组的拼接，暂时没搞出来，而java直接用的String类型的，所以直接用java代码提交的；"><a href="#tip：这里直接用的四个输出语句，但是leetcode上要求用函数，所以要用return返回整个字符串，但是C语言有涉及到char-类型数组的拼接，暂时没搞出来，而java直接用的String类型的，所以直接用java代码提交的；" class="headerlink" title="tip：这里直接用的四个输出语句，但是leetcode上要求用函数，所以要用return返回整个字符串，但是C语言有涉及到char*类型数组的拼接，暂时没搞出来，而java直接用的String类型的，所以直接用java代码提交的；"></a>tip：这里直接用的四个输出语句，但是leetcode上要求用函数，所以要用return返回整个字符串，但是C语言有涉及到char*类型数组的拼接，暂时没搞出来，而java直接用的String类型的，所以直接用java代码提交的；</h2><p>补充：C语言leetcode版本<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">char</span> str1[<span class="number">30</span>];</span><br><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">intToRoman</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> *thousands[<span class="number">4</span>]=&#123;<span class="string">""</span>,<span class="string">"M"</span>,<span class="string">"MM"</span>,<span class="string">"MMM"</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> *hundreds[<span class="number">10</span>]=&#123;<span class="string">""</span>,<span class="string">"C"</span>, <span class="string">"CC"</span>, <span class="string">"CCC"</span>, <span class="string">"CD"</span>, <span class="string">"D"</span>, <span class="string">"DC"</span>, <span class="string">"DCC"</span>, <span class="string">"DCCC"</span>, <span class="string">"CM"</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> *tens[<span class="number">10</span>] = &#123;<span class="string">""</span>,<span class="string">"X"</span>,<span class="string">"XX"</span>,<span class="string">"XXX"</span>,<span class="string">"XL"</span>,<span class="string">"L"</span>,<span class="string">"LX"</span>,<span class="string">"LXX"</span>,<span class="string">"LXXX"</span>,<span class="string">"XC"</span>&#125;;</span><br><span class="line">    <span class="keyword">char</span> *digits[<span class="number">10</span>] = &#123;<span class="string">""</span>,<span class="string">"I"</span>,<span class="string">"II"</span>,<span class="string">"III"</span>,<span class="string">"IV"</span>,<span class="string">"V"</span>,<span class="string">"VI"</span>,<span class="string">"VII"</span>,<span class="string">"VIII"</span>,<span class="string">"IX"</span>&#125;;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="built_in">strcpy</span>(str1,thousands[num/<span class="number">1000</span>]);</span><br><span class="line">    <span class="keyword">char</span> str2[<span class="number">4</span>];</span><br><span class="line">    <span class="built_in">strcpy</span>(str2,hundreds[num%<span class="number">1000</span>/<span class="number">100</span>]);</span><br><span class="line">    <span class="keyword">char</span> str3[<span class="number">4</span>];</span><br><span class="line">    <span class="built_in">strcpy</span>(str3,tens[num%<span class="number">100</span>/<span class="number">10</span>]);</span><br><span class="line">    <span class="keyword">char</span> str4[<span class="number">4</span>];</span><br><span class="line">    <span class="built_in">strcpy</span>(str4,digits[num%<span class="number">10</span>]);</span><br><span class="line">   </span><br><span class="line">    <span class="built_in">strcat</span>(str1,str2);</span><br><span class="line">    <span class="built_in">strcat</span>(str1,str3);</span><br><span class="line">    <span class="built_in">strcat</span>(str1,str4);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> str1;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里需要主义的是str1必须要设成全局变量，否则没有办法传出去，另外，strcat使用时前面那个一定要分配足够大的空间，否则就会runtime error！</p>
 
       
     </div>
@@ -596,8 +598,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -692,6 +703,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip：这里直接用的四个输出语句，但是leetcode上要求用函数，所以要用return返回整个字符串，但是C语言有涉及到char-类型数组的拼接，暂时没搞出来，而java直接用的String类型的，所以直接用java代码提交的；"><span class="nav-number">1.</span> <span class="nav-text">tip：这里直接用的四个输出语句，但是leetcode上要求用函数，所以要用return返回整个字符串，但是C语言有涉及到char*类型数组的拼接，暂时没搞出来，而java直接用的String类型的，所以直接用java代码提交的；</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
