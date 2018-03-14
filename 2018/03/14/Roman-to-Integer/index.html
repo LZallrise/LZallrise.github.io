@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下">
+<meta name="description" content="这道题总体上来说与上题用的是同样的思想，但是需要你对罗马数字的组成的一些细节进行了解；">
 <meta name="keywords" content="LeetCode日常">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Reverse Integer">
-<meta property="og:url" content="http://yoursite.com/2018/03/11/Reverse-Integer/index.html">
+<meta property="og:title" content="Roman to Integer">
+<meta property="og:url" content="http://yoursite.com/2018/03/14/Roman-to-Integer/index.html">
 <meta property="og:site_name" content="LZ的小屋">
-<meta property="og:description" content="这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下">
+<meta property="og:description" content="这道题总体上来说与上题用的是同样的思想，但是需要你对罗马数字的组成的一些细节进行了解；">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-12T13:33:48.156Z">
+<meta property="og:updated_time" content="2018-03-14T12:44:51.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Reverse Integer">
-<meta name="twitter:description" content="这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下">
+<meta name="twitter:title" content="Roman to Integer">
+<meta name="twitter:description" content="这道题总体上来说与上题用的是同样的思想，但是需要你对罗马数字的组成的一些细节进行了解；">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/11/Reverse-Integer/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/14/Roman-to-Integer/"/>
 
 
 
 
 
-  <title>Reverse Integer | LZ的小屋</title>
+  <title>Roman to Integer | LZ的小屋</title>
   
 
 
@@ -306,7 +306,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/11/Reverse-Integer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/14/Roman-to-Integer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LZ">
@@ -323,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Reverse Integer</h1>
+          <h1 class="post-title" itemprop="name headline">Roman to Integer</h1>
         
 
         <div class="post-meta">
@@ -335,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-11T17:16:58+08:00">
-                2018-03-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T20:42:01+08:00">
+                2018-03-14
               </time>
             
 
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-12T21:33:48+08:00">
-                2018-03-12
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-14T20:44:51+08:00">
+                2018-03-14
               </time>
             
           </span>
@@ -388,8 +388,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/11/Reverse-Integer/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/11/Reverse-Integer/" itemprop="commentsCount"></span>
+                <a href="/2018/03/14/Roman-to-Integer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/14/Roman-to-Integer/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  184
+                  438
                 </span>
               
 
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -453,9 +453,8 @@
       
 
       
-        <p>这道题也是比较简单的一道题，在leetcode上是easy，但是也是有些细节需要注意一下。代码如下<br><a id="more"></a></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="comment">//int min_value =0x80000000,max_value=0x7fffffff;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> a,b,c,d=<span class="number">0</span>,f;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"请输入："</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);</span><br><span class="line">    <span class="comment">//if(a&lt;=min_value||a&gt;=max_value)</span></span><br><span class="line">            <span class="comment">//return -1;</span></span><br><span class="line">    <span class="keyword">int</span> flag=a&lt;<span class="number">0</span>?<span class="number">-1</span>:<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(a&lt;<span class="number">0</span>)</span><br><span class="line">     a=<span class="built_in">abs</span>(a);</span><br><span class="line">       <span class="keyword">while</span>(a&gt;<span class="number">0</span>)</span><br><span class="line">       &#123;   <span class="keyword">int</span> temp=d;</span><br><span class="line">            d=d*<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(temp!=d/<span class="number">10</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//注意溢出的处理</span></span><br><span class="line">           d=d+a%<span class="number">10</span>;<span class="comment">//精髓所在</span></span><br><span class="line">           a=a/<span class="number">10</span>;</span><br><span class="line">       &#125;</span><br><span class="line">    d=d*flag;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,d);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面代码中的temp！=d/10,就是为了试探我们的数据会不会有溢出，如果有溢出则直接报错。</p>
+        <p>这道题总体上来说与上题用的是同样的思想，但是需要你对罗马数字的组成的一些细节进行了解；<br><a id="more"></a><br>给定一个罗马数字s，( I&lt;=s&lt;=MMMCMXCIX)（即1到3999），将罗马数字转换成整数。<br>如罗马数字I，II，III，IV，V分别代表数字1, 2, 3, 4, 5。<br>格式：<br>第一行输入一个罗马数字，接下来输出对应的整数。<br>提示：<br>首先要来了解一下罗马数字表示法，基本字符有7个：I，V，X，L，C，D，M，分别表示1，5，10，50，100，500，1000。<br>在构成数字的时候，有下列规则：<br>1、相同的数字连写，所表示的数等于这些数字相加得到的数，如：Ⅲ = 3；<br>2、小的数字在大的数字的右边，所表示的数等于这些数字相加得到的数， 如：Ⅷ = 8；Ⅻ = 12；<br>3、小的数字，（限于Ⅰ、X 和C）在大的数字的左边，所表示的数等于大数减小数得到的数，如：Ⅳ= 4；Ⅸ= 9；<br>4、正常使用时，连写的数字重复不得超过三次。</p>
+<p>代码如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(<span class="keyword">char</span>*)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span>* lm[<span class="number">1000</span>];</span><br><span class="line">    gets(lm);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,romanToInt(lm));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(<span class="keyword">char</span>* s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,count=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="built_in">strlen</span>(s);i++)</span><br><span class="line">        <span class="keyword">switch</span>(s[i])</span><br><span class="line">    &#123;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">'M'</span> : count+=<span class="number">1000</span>;<span class="keyword">break</span>;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">'D'</span> : count+=<span class="number">500</span>;<span class="keyword">break</span>;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">'C'</span> :</span><br><span class="line">            <span class="keyword">if</span>(s[i+<span class="number">1</span>]==<span class="string">'D'</span>||s[i+<span class="number">1</span>]==<span class="string">'M'</span>)</span><br><span class="line">                count-=<span class="number">100</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                count+=<span class="number">100</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">'L'</span> : count+=<span class="number">50</span>;<span class="keyword">break</span>;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">'X'</span> :</span><br><span class="line">            <span class="keyword">if</span>(s[i+<span class="number">1</span>]==<span class="string">'L'</span>||s[i+<span class="number">1</span>]==<span class="string">'C'</span>)</span><br><span class="line">                count-=<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                count+=<span class="number">10</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">'V'</span> : count+=<span class="number">5</span>;<span class="keyword">break</span>;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">'I'</span> :</span><br><span class="line">              <span class="keyword">if</span>(s[i+<span class="number">1</span>]==<span class="string">'X'</span>||s[i+<span class="number">1</span>]==<span class="string">'V'</span>)</span><br><span class="line">                count-=<span class="number">1</span>;</span><br><span class="line">              <span class="keyword">else</span></span><br><span class="line">                count+=<span class="number">1</span>;</span><br><span class="line">              <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -494,8 +493,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/09/two-sum/" rel="next" title="two sum">
-                <i class="fa fa-chevron-left"></i> two sum
+              <a href="/2018/03/13/Integer-to-Roman/" rel="next" title="Integer to Roman">
+                <i class="fa fa-chevron-left"></i> Integer to Roman
               </a>
             
           </div>
@@ -503,10 +502,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/12/Palindrome-Number/" rel="prev" title="Palindrome Number">
-                Palindrome Number <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
