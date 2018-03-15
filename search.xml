@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Valid Parentheses]]></title>
+    <url>%2F2018%2F03%2F15%2FValid-Parentheses%2F</url>
+    <content type="text"><![CDATA[这道题就是我们在数据结构里学到的括号匹配，运用栈来做的话很快就能做出来，不要想偏了代码如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344#include&lt;string.h&gt;typedef int bool;#define false 0#define true 1bool isValid(char*);int main()&#123; char* s[1000]; gets(s); printf("%d",isValid(s)); return 0;&#125;bool isValid(char* s) &#123; char stack[10000]; int top=-1; while(*s) &#123; if(*s==')') &#123; if(top&gt;=0&amp;&amp;stack[top]=='(') top--; else return false; &#125; else if(*s=='&#125;') &#123; if(top&gt;=0&amp;&amp;stack[top]=='&#123;') top--; else return false; &#125; else if(*s==']') &#123; if(top&gt;=0&amp;&amp;stack[top]=='[') top--; else return false; &#125; else stack[++top]=*s; s++; &#125; return top==-1;&#125; 注意stack的数组一定要比s的大，不然会有溢出！]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>LeetCode日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Roman to Integer]]></title>
     <url>%2F2018%2F03%2F14%2FRoman-to-Integer%2F</url>
     <content type="text"><![CDATA[这道题总体上来说与上题用的是同样的思想，但是需要你对罗马数字的组成的一些细节进行了解；给定一个罗马数字s，( I&lt;=s&lt;=MMMCMXCIX)（即1到3999），将罗马数字转换成整数。如罗马数字I，II，III，IV，V分别代表数字1, 2, 3, 4, 5。格式：第一行输入一个罗马数字，接下来输出对应的整数。提示：首先要来了解一下罗马数字表示法，基本字符有7个：I，V，X，L，C，D，M，分别表示1，5，10，50，100，500，1000。在构成数字的时候，有下列规则：1、相同的数字连写，所表示的数等于这些数字相加得到的数，如：Ⅲ = 3；2、小的数字在大的数字的右边，所表示的数等于这些数字相加得到的数， 如：Ⅷ = 8；Ⅻ = 12；3、小的数字，（限于Ⅰ、X 和C）在大的数字的左边，所表示的数等于大数减小数得到的数，如：Ⅳ= 4；Ⅸ= 9；4、正常使用时，连写的数字重复不得超过三次。 代码如下：1234567891011121314151617181920212223242526272829303132333435363738394041#include&lt;stdio.h&gt;#include&lt;string.h&gt;int romanToInt(char*);int main()&#123; char* lm[1000]; gets(lm); printf("%d",romanToInt(lm)); return 0;&#125;int romanToInt(char* s)&#123; int i,count=0; for(i=0;i&lt;strlen(s);i++) switch(s[i]) &#123; case 'M' : count+=1000;break; case 'D' : count+=500;break; case 'C' : if(s[i+1]=='D'||s[i+1]=='M') count-=100; else count+=100; break; case 'L' : count+=50;break; case 'X' : if(s[i+1]=='L'||s[i+1]=='C') count-=10; else count+=10; break; case 'V' : count+=5;break; case 'I' : if(s[i+1]=='X'||s[i+1]=='V') count-=1; else count+=1; break; &#125; return count;&#125;]]></content>
