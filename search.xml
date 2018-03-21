@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Longest Common Prefix]]></title>
+    <url>%2F2018%2F03%2F21%2FLongest-Common-Prefix%2F</url>
+    <content type="text"><![CDATA[这道题虽然说算法比较简单，但是有些细节不注意的话还是比较头疼的123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&lt;stdio.h&gt;#include&lt;string.h&gt;#include&lt;stdlib.h&gt;char* longestCommonPrefix(char** strs, int strsSize)&#123; int n=0; char c; char ** s; s=strs; if(strsSize==0) return ""; int strs1=strlen(strs[0]); for(int m=0;m&lt;strsSize;m++) &#123; if(strs1&gt;strlen(strs[m])) strs1=strlen(strs[m]); &#125; int i; char * prefix=(char *)malloc(sizeof(char)*(strs1+1));//分配空间，不分配会出错 for(i=0;i&lt;strs1;i++) &#123; int j; c=strs[0][i]; if(c=='\0') break; for(j=0;j&lt;strsSize;j++) &#123; if(c!=strs[j][i]) break; &#125; if(j==strsSize) prefix[i]=c; else break; &#125; prefix[i]='\0'; return prefix;&#125;void main()&#123; char *strs[] = &#123; "12345" , "1246" , "1248"&#125;; //for(int i=0;i&lt;3;i++) //&#123; // printf("%s ",strs[i]); //&#125; char * prefix; prefix=longestCommonPrefix(strs, 3); printf("%s\n",prefix);&#125; 这里一开始运行的时候怎么都运行不了，但是我试着把函数体提交到leetcode上后竟然通过了，后来一百度发现还要分配空间，至于为啥我还没弄清楚。。。]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>LeetCode日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Valid Parentheses]]></title>
     <url>%2F2018%2F03%2F15%2FValid-Parentheses%2F</url>
-    <content type="text"><![CDATA[这道题就是我们在数据结构里学到的括号匹配，运用栈来做的话很快就能做出来，不要想偏了代码如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344#include&lt;string.h&gt;typedef int bool;#define false 0#define true 1bool isValid(char*);int main()&#123; char* s[1000]; gets(s); printf("%d",isValid(s)); return 0;&#125;bool isValid(char* s) &#123; char stack[10000]; int top=-1; while(*s) &#123; if(*s==')') &#123; if(top&gt;=0&amp;&amp;stack[top]=='(') top--; else return false; &#125; else if(*s=='&#125;') &#123; if(top&gt;=0&amp;&amp;stack[top]=='&#123;') top--; else return false; &#125; else if(*s==']') &#123; if(top&gt;=0&amp;&amp;stack[top]=='[') top--; else return false; &#125; else stack[++top]=*s; s++; &#125; return top==-1;&#125; 注意stack的数组一定要比s的大，不然会有溢出！]]></content>
+    <content type="text"><![CDATA[这道题就是我们在数据结构里学到的括号匹配，运用栈来做的话很快就能做出来，不要想偏了代码如下：1234567891011121314151617181920212223242526272829303132333435363738394041#include&lt;string.h&gt;typedef int bool;#define false 0#define true 1bool isValid(char*);int main()&#123; char* s[1000]; gets(s); printf("%d",isValid(s)); return 0;&#125;bool isValid(char* s) &#123; char *stack[10000]; int top=-1; while(*s) &#123; switch(*s) &#123; case ')' : if(top&gt;=0&amp;&amp;stack[top]=='(') top--; else return false;break; case '&#125;' : if(top&gt;=0&amp;&amp;stack[top]=='&#123;') top--; else return false;break; case ']' : if(top&gt;=0&amp;&amp;stack[top]=='[') top--; else return false;break; default : stack[++top]=*s; &#125; s++; &#125; return top==-1;&#125; 注意stack的数组一定要比s的大，不然会有溢出！]]></content>
       <categories>
         <category>C语言</category>
       </categories>
